@@ -779,3 +779,8 @@ button.info-button:hover {
 .snowflake:hover {
     cursor: default;
 }
+
+/*fix visibility occurring on plot styling*/
+.router-hidden * {
+    visibility: inherit !important;
+}

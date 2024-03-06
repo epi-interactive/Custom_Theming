@@ -15,14 +15,6 @@ source("source/pages/app_ui.R")
 source("source/pages/app_server.R")
 source("source/pages/splash.R")
 
-
-routes <- c(
-    route("", pageSplashUI("splash")),
-    route("app", pageAppUI("app"))
-)
-router <- make_router(routes)
-
-
 lightboxBtn <- function(id, item){
   htmltools::tagAppendAttributes(item,
                                  'data-toggle'="modal",
@@ -50,18 +42,23 @@ lightboxBody <- function(id, title,svgName, description, calories){
   )
 }
 
-
 createFilterPanel <- function(id, title, ...){
-  div(class="panel filter-panel sidebar-underline", id=paste0("sub-filter-area-",id),
-      div(class="filter-title",
-          'data-toggle'="collapse", 'data-target'=paste0("#", id),  'href'=paste0("#", id), 
-          div(class="col-sm-offset-1", HTML(title))
-      ),
-      div(class="col-sm-offset-1 filter-body collapse in", id=id,
-          tagList(...)
-      )
-  )
+    div(class="panel filter-panel sidebar-underline", id=paste0("sub-filter-area-",id),
+        div(class="filter-title",
+            'data-toggle'="collapse", 'data-target'=paste0("#", id),  'href'=paste0("#", id), 
+            div(class="col-sm-offset-1", HTML(title))
+        ),
+        div(class="col-sm-offset-1 filter-body collapse in", id=id,
+            tagList(...)
+        )
+    )
 }
+
+routes <- c(
+    route("", pageSplashUI("splash")),
+    route("app", pageAppUI("app"))
+)
+router <- make_router(routes)
 
 G_cookiesLB <-  lightboxBody("cookies",
                              title="Chocolate chip cookie",
