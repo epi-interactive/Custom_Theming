@@ -5,15 +5,23 @@
 ##################################
 
 library(shiny)
-library(shinyrouter)
+library(shiny.router)
 library(stringr)
 library(plotly)
 library(shiny)
 library(shinyBS)
 
-source("source/pages/app.R")
+source("source/pages/app_ui.R")
 source("source/pages/app_server.R")
 source("source/pages/splash.R")
+
+
+routes <- c(
+    route("", pageSplashUI("splash")),
+    route("app", pageAppUI("app"))
+)
+router <- make_router(routes)
+
 
 lightboxBtn <- function(id, item){
   htmltools::tagAppendAttributes(item,

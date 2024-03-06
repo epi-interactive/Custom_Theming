@@ -6,7 +6,7 @@
 
 pageAppUI <- function(id) {
   ns <- NS(id)
-  
+
   div(class="app",
       HTML('<div id="snowflakeContainer">
         <p class="snowflake">*</p>
@@ -33,7 +33,7 @@ pageAppUI <- function(id) {
                         plotlyOutput(ns("caloriesComparison"))
                     ),
                     div(class="col-sm-3",
-                        uiOutput(ns("chartMsg"))    
+                        uiOutput(ns("chartMsg"))
                     )
                   )
                 )
@@ -42,7 +42,7 @@ pageAppUI <- function(id) {
             # Sliders start
             div(class="sliders col-lg-5 col-sm-12 col-lg-pull-7",
                 div(class="sliders-panel",class="col-lg-10 col-sm-12",
-                             createFilterPanel(ns("treats-panel"), "Pick your Christmas treats and the amount:", 
+                             createFilterPanel(ns("treats-panel"), "Pick your Christmas treats and the amount:",
                                div(class="treats",
                                    fluidRow(
                                      uiOutput(ns("cookiesSlider")),
@@ -66,7 +66,7 @@ pageAppUI <- function(id) {
                                    ),
                                    fluidRow(
                                      uiOutput(ns("newTreat"))
-                                     
+
                                    ),
                                    fluidRow(
                                      uiOutput(ns("customTreatError"))
@@ -80,7 +80,7 @@ pageAppUI <- function(id) {
           fluidRow(
             div(class="sliders col-lg-5 col-sm-12",
                 div(class="sliders-panel",class="col-lg-10 col-sm-12",
-                    createFilterPanel(ns("exercise-panel"), "Pick your exercise:<br/><br/>", 
+                    createFilterPanel(ns("exercise-panel"), "Pick your exercise:<br/><br/>",
                                       div(class="exercise",
                                           fluidRow(
                                             uiOutput(ns("presentsSlider")),
@@ -104,7 +104,7 @@ pageAppUI <- function(id) {
                                           ),
                                           fluidRow(
                                             uiOutput(ns("newExercise"))
-                                            
+
                                           ),
                                           fluidRow(
                                             uiOutput(ns("customExerciseError"))

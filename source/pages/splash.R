@@ -12,7 +12,7 @@ pageSplashUI <- function(id) {
            tags$h1("Christmas treats?"),
            tags$h1("Wondering how to work them off?")
            ),
-         div(class="launch", tags$a(href="/app", tags$h1("Enter here to find out!")))
+         div(class="launch", tags$a(href="#!/app", tags$h1("Enter here to find out!")))
      ),
      div(class="footer",
          tags$img(class="right", src="img/merry_christmas_epi.png")

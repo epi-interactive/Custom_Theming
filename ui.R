@@ -19,7 +19,8 @@ shinyUI(
         HTML('<img id="loadingSpinner" src="img/Text_Start.svg"/>')
     ),
     div(id="snowflakeContainer", HTML('<p class="snowflake">*</p>')),
-    router_ui(),
+    router$ui,
+    
     G_cookiesLB,
     G_piesLB,
     G_breadLB,
