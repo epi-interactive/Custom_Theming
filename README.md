@@ -2,7 +2,7 @@
 
 An R Shiny application for tracking your treats and exercises over the Christmas period. We created this app for our 2018 Christmas game and it shows how you can custom-theme sliders and other UI elements. It also demonstrates how you can blend in images based on reactive values and add hovers to it.
 
-See it in action <a href="https://shiny.epi-interactive.com/cookie-explorer" target="_blank">here</a>
+See it in action <a href="https://rshiny2.epi-interactive.com/apps/cookie-explorer" target="_blank">here</a>
 
 ![alt text](www/cookie-explorer.PNG)
 
